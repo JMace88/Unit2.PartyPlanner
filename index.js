@@ -9,6 +9,9 @@ const state = {
 const partyList = document.querySelector('#parties');
 const addPartyForm = document.querySelector('#addParty');
 
+// -----EVENT LISTENERS-----
+addPartyForm.addEventListener('submit', addParty);
+
 // ----FETCH CALLS-----
 async function getParties() {
   try {
@@ -29,11 +32,12 @@ async function addParty(event) {
       body: JSON.stringify({
         name: addPartyForm.name.value,
         description: addPartyForm.description.value,
-        date: addPartyForm.date.value,
+        date: new Date(addPartyForm.date.value).toISOString(),
         location: addPartyForm.location.value,
       }),
     });
     if (!response.ok) {
+        console.log(addPartyForm.date.value)
       throw new Error('Failed to create party');
     }
     render();
@@ -41,9 +45,6 @@ async function addParty(event) {
     console.error(error);
   }
 }
-
-// -----EVENT LISTENERS-----
-addPartyForm.addEventListener('submit', addParty);
 
 // -----RENDER-----
 function renderParties() {

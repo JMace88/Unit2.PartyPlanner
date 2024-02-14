@@ -1,0 +1,16 @@
+# GET https://fsa-crud-2aa9294fe819.herokuapp.com/api/josh-mace/events
+
+# GET https://fsa-crud-2aa9294fe819.herokuapp.com/api/josh-mace/events/2100
+
+
+post https://fsa-crud-2aa9294fe819.herokuapp.com/api/josh-mace/events HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Event Name",
+    "description": "This is a description of the event.",
+    "date": ":28",
+    "location": "123 Street"
+}
+
+# DELETE https://fsa-crud-2aa9294fe819.herokuapp.com/api/josh-mace/events/2164
