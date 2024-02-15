@@ -39,7 +39,6 @@ async function addParty(event) {
       }),
     });
     if (!response.ok) {
-      console.log(addPartyForm.date.value);
       throw new Error('Failed to create party');
     }
     render();
@@ -53,6 +52,9 @@ async function deleteParty(eventId) {
     const response = await fetch(API_URL + '/' + eventId, {
       method: 'DELETE',
     });
+    if (!response.ok) {
+      throw new Error('Failed to delete party');
+    }
     render();
   } catch (error) {
     console.error(error);
@@ -68,6 +70,7 @@ function renderParties() {
 
   const partyCards = state.parties.map((party) => {
     const partyCard = document.createElement('li');
+    partyCard.classList.add('party')
     partyCard.innerHTML = `
         <h2>${party.name}</h2>
         <h3>${party.description}</h3>

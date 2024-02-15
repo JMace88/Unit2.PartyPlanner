@@ -1,0 +1,44 @@
+body {
+  background-color: blanchedalmond;
+}
+
+li {
+  background-color: rgb(198, 239, 246);
+  border-style: solid;
+  border-radius: 0.5rem;
+  list-style: none;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  margin-inline: 10%;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  color: rgb(17, 106, 170);
+}
+#form-container {
+  background-color: rgb(198, 239, 246);
+  box-sizing: border-box;
+  border-style: solid;
+  margin-inline: 10%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  align-content: center;
+}
+#parties {
+  padding: 0;
+}
+form {
+    font-size: 1.25rem;
+  border: 0.25rem;
+}
+input {
+  width: 95%;
+  padding: 0.5rem 1rem;
+  text-overflow: wrap;
+}
+h2 {
+}
+h3 {
+}
